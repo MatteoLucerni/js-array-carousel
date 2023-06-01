@@ -19,6 +19,9 @@ images[0].classList.add('active')
 next.addEventListener('click', function(){
     images[imgIndex].classList.remove('active')
     imgIndex++;
+    if (imgIndex === imagesNames.length){
+        imgIndex = 0;
+    }
     console.log(imgIndex)
     images[imgIndex].classList.add('active')
 });
@@ -26,6 +29,9 @@ next.addEventListener('click', function(){
 previous.addEventListener('click', function(){
     images[imgIndex].classList.remove('active')
     imgIndex--;
+    if (imgIndex === -1){
+        imgIndex = (imagesNames.length - 1);
+    }
     console.log(imgIndex)
     images[imgIndex].classList.add('active')
 });
