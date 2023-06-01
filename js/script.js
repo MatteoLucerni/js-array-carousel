@@ -18,30 +18,35 @@ const imagesPreview = document.querySelectorAll('#preview img');
 console.log(images);
 
 images[0].classList.add('active');
-imagesPreview[0].classList.add('border-green');
+imagesPreview[0].classList.add('border-green', 'full-opacity');
+
+imagesPreview[0].addEventListener('click', function(){
+    imgIndex = 0;
+    console.log('clicked')
+})
 
 next.addEventListener('click', function(){
     images[imgIndex].classList.remove('active');
-    imagesPreview[imgIndex].classList.remove('border-green');
+    imagesPreview[imgIndex].classList.remove('border-green', 'full-opacity');
     imgIndex++;
     if (imgIndex === imagesNames.length){
         imgIndex = 0;
     }
     console.log(imgIndex)
     images[imgIndex].classList.add('active')
-    imagesPreview[imgIndex].classList.add('border-green');
+    imagesPreview[imgIndex].classList.add('border-green', 'full-opacity');
 });
 
 previous.addEventListener('click', function(){
     images[imgIndex].classList.remove('active')
-    imagesPreview[imgIndex].classList.remove('border-green');
+    imagesPreview[imgIndex].classList.remove('border-green', 'full-opacity');
     imgIndex--;
     if (imgIndex === -1){
         imgIndex = (imagesNames.length - 1);
     }
     console.log(imgIndex)
     images[imgIndex].classList.add('active')
-    imagesPreview[imgIndex].classList.add('border-green');
+    imagesPreview[imgIndex].classList.add('border-green', 'full-opacity');
 });
 
 
