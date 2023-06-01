@@ -5,6 +5,10 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+body{
+    background-color: black;
+}
+
 img{
     max-width: 100%;
     height: 100%;
@@ -14,6 +18,7 @@ img{
 h1{
     font-size: 5rem;
     margin-bottom: 30px;
+    color: white;
 }
 
 /* carousel */
@@ -26,9 +31,6 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid gray;
-    border-radius: 25px;
-    overflow: auto;
     background-color: #28293f;
     user-select: none;
 }
@@ -43,6 +45,11 @@ h1{
     border: 5px solid black;
     border-radius: 50%;
     transform: translateY(-50%);
+    transition: border .4s;
+}
+
+#carousel i.fa-solid:hover{
+    border: 5px solid white;
 }
 
 #carousel .fa-circle-arrow-left{
@@ -107,4 +114,10 @@ h1{
 
 .full-opacity{
     opacity: 1!important;
+}
+
+.iphone-bg{
+    position: absolute;
+    transform: rotate(-90deg);
+    height: 1142px;
 }
