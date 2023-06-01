@@ -14,28 +14,34 @@ for (let i = 0; i < imagesNames.length; i++){
 };
 
 const images = document.querySelectorAll('#imgPlacer img');
-console.log(images)
+const imagesPreview = document.querySelectorAll('#preview img');
+console.log(images);
 
-images[0].classList.add('active')
+images[0].classList.add('active');
+imagesPreview[0].classList.add('border-green');
 
 next.addEventListener('click', function(){
-    images[imgIndex].classList.remove('active')
+    images[imgIndex].classList.remove('active');
+    imagesPreview[imgIndex].classList.remove('border-green');
     imgIndex++;
     if (imgIndex === imagesNames.length){
         imgIndex = 0;
     }
     console.log(imgIndex)
     images[imgIndex].classList.add('active')
+    imagesPreview[imgIndex].classList.add('border-green');
 });
 
 previous.addEventListener('click', function(){
     images[imgIndex].classList.remove('active')
+    imagesPreview[imgIndex].classList.remove('border-green');
     imgIndex--;
     if (imgIndex === -1){
         imgIndex = (imagesNames.length - 1);
     }
     console.log(imgIndex)
     images[imgIndex].classList.add('active')
+    imagesPreview[imgIndex].classList.add('border-green');
 });
 
 

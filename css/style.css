@@ -20,6 +20,10 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid gray;
+    border-radius: 25px;
+    overflow: auto;
+    background-color: #28293f;
 }
 
 #carousel .gallery{
@@ -65,6 +69,7 @@ img{
 
 #preview .preview-cont img{
     width: 100%;
+    position: relative;
 }
 
 /* utils */
@@ -86,3 +91,6 @@ img{
     display: block!important;
 }
 
+.border-green{
+    border: 5px solid green;
+}
