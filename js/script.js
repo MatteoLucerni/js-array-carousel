@@ -33,7 +33,7 @@ next.addEventListener('click', function(){
         imgIndex = 0;
     }
     console.log(imgIndex)
-    images[imgIndex].classList.add('active')
+    images[imgIndex].classList.add('active', 'animated-left')
     imagesPreview[imgIndex].classList.add('border-green', 'full-opacity');
 });
 
@@ -45,7 +45,7 @@ previous.addEventListener('click', function(){
         imgIndex = (imagesNames.length - 1);
     }
     console.log(imgIndex)
-    images[imgIndex].classList.add('active')
+    images[imgIndex].classList.add('active', 'animated-right')
     imagesPreview[imgIndex].classList.add('border-green', 'full-opacity');
 });
 

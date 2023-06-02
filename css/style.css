@@ -33,10 +33,12 @@ h1{
     align-items: center;
     background-color: #28293f;
     user-select: none;
+    overflow: hidden;
 }
 
 #carousel .gallery{
     height: 100%;
+
 }
 
 #carousel i.fa-solid{
@@ -80,6 +82,7 @@ h1{
     overflow: hidden;
     height: 100px;
     width: calc(100% / 5);
+    z-index: 1;
 }
 
 #preview .preview-cont img{
@@ -117,7 +120,33 @@ h1{
 }
 
 .iphone-bg{
-    position: absolute;
+    position: fixed;
     transform: rotate(-90deg);
     height: 1142px;
+}
+
+.animated-left{
+    animation: slideleft linear 0.1s;
+}
+
+.animated-right{
+    animation: slideright linear 0.1s;
+}
+
+@keyframes slideleft {
+    0%{
+        transform: translateX(20%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideright {
+    0%{
+        transform: translateX(-20%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
 }
