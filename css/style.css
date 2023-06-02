@@ -69,11 +69,11 @@ h1{
 }
 
 #preview{
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: 50px;
     left: 50%;
     transform: translateX(-50%);
-    width: 60%;
+    width: 50%;
     display: flex;
     background-color: black;
 }
